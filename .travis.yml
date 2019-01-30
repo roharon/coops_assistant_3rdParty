@@ -16,4 +16,4 @@ before_script:
   - git config --global user.name 'Aaron Roh'
   - git config --global user.email 'roharon98@gmail.com'
   - openssl genrsa 1024 > ./ssl/key.pem
-  - openssl req -batch -x509 -new -key ./ssl/key.pem > ./ssl/cert.pem KR 
+  - openssl req -x509 -new -key ./ssl/key.pem > ./ssl/cert.pem KR -subj "/C=KR/ST=where/L=where2/O=Aaron Roh/OU=Aaron/CN=aaronroh.org"
