@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 10.14.0
+  - "10"
+  
+install:
+  - npm install
+  
+script: 
+  - npm start
+  
+dist: xenial
+sudo: yes
+
+before_script:
+  - git config --global user.name 'Aaron Roh'
+  - git config --global user.email 'roharon98@gmail.com'
