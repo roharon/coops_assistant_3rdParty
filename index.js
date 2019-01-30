@@ -5,10 +5,16 @@ const {dialogflow, Permission} = require('actions-on-google')
 const https = require('https');
 const fs = require('fs');
 
-var options = {
-    key: fs.readFileSync('./ssl/key.pem'),
-    cert: fs.readFileSync('./ssl/cert.pem')
+try {
+    var options = {
+        key: fs.readFileSync('./ssl/key.pem'),
+        cert: fs.readFileSync('./ssl/cert.pem')
+    }
 }
+catch(err){
+    console.log("ERROR ON SSL")
+}
+
 var port1 = 3005;
 var port2 = 443;
 const expressApp = express().use(bodyParser.json());

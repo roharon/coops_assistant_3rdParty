@@ -15,3 +15,6 @@ sudo: yes
 before_script:
   - git config --global user.name 'Aaron Roh'
   - git config --global user.email 'roharon98@gmail.com'
+  - openssl genrsa 1024 > ./ssl/key.pem
+  - openssl req -x509 -new -key ./ssl/key.pem > ./ssl/cert.pem
+
