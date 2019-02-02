@@ -11,7 +11,3 @@ script:
   
 dist: xenial
 sudo: yes
-
-before_script:
-  - git config --global user.name 'Aaron Roh'
-  - git config --global user.email 'roharon98@gmail.com'
